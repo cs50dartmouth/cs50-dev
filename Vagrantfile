@@ -44,46 +44,7 @@ Vagrant.configure("2") do |config|
   # Finish provisioning with a shell script, which **runs inside the VM**
   config.vm.provision "shell", inline: <<-SHELL
     export DEBIAN_FRONTEND=noninteractive
-    log=/home/vagrant/provision.log
-    success=true
-
-    function try() {
-        echo "\n=====\n$1" &>> $log;
-        if ! $1 &>> $log;
-        then echo "FAILED:  $1"; success=false; fi
-    }
-
-    echo Logging to $log...
-    echo Provision started &> $log
-
-    echo Protect your ssh keys...
-    try "chmod 600 .ssh/id_rsa .ssh/id_rsa.pub"
-
-    echo Set to Eastern timezone...
-    try "cp -f /usr/share/zoneinfo/US/Eastern /etc/localtime"
-
-    echo Installing necessary packages...
-    try "apt-get update"
-    for package in wget git gcc valgrind emacs autoconf;
-    do
-        try "apt-get install -y $package"
-    done
-
-    echo Installing dot files.
-    dotdir=/home/vagrant/cs50-dev/dotfiles/virtualbox
-    for dot in $dotdir/*; do
-    	dotfile=.${dot##*/}
-    	dotlink=/home/vagrant/$dotfile
-	rm -f $dotlink
-	try "ln -s $dot $dotlink"
-    done
-
-    echo "Do all your work in ~/cs50-dev/" > /home/vagrant/DO-NO-WORK-HERE
-
-    if $success
-    then echo "Provision succeeded.";
-    else echo "PROVISION FAILED; log in and review $log for details.";
-    fi
+    bash /home/vagrant/cs50-dev/setup/provision.sh
   SHELL
 
 end
