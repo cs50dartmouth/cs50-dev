@@ -5,7 +5,7 @@
 <!--<img src="./media/github-sign-up.png" alt="github-sign-up"
 	title="Github Sign Up"/>-->
 
-2. We need to configure SSH keys for pulling and pushing code with your new GitHub account. First, check to see if you already have an existing ssh key. Open the **Terminal** application, which is located at `Applications/Utilities`. Copy and paste the following command into terminal and press *enter* (⏎). This will list your ssh key files (if they exist). If **DO NOT** not have any keys, you should recieve a `No such file or directory` message as output. If you **DO** have an existing key, you should skip to step 4.
+2. We need to configure SSH keys for pulling and pushing code with your new GitHub account. First, check to see if you already have an existing ssh key. Open the **Terminal** application, which is located at `Applications/Utilities`. Copy and paste the following command into terminal and press *enter* (⏎). You should see files `id_rsa` and `id_rsa.pub` if you already have SSH configured. If you **DO** have existing keys, you should skip to step 4.
 
 ```
 ls -al ~/.ssh
@@ -93,13 +93,8 @@ sudo chown -R "$USER":admin /usr/local/homebrew
 cd ~/cs50-dev && ./setup/osx-bootstrap.sh
 ```
 
-<img src="./media/bootstrap-4.png" alt="bootstrap-4"
-	title="Bootstrap"/>
 
-15. After the installation script runs, read through its output to see if it printed any warnings or errors. It should end with "bootstrap complete", if it was successful. If not, please use the "Vagrant-MacOS" forum on Piazza to ask for help. You will most likely also see output related to **Guest Additions** (shown in second picture). As long as you do not have any glaring errors, output similar to what is shown below is fine.
+15. After the installation script runs, read through its output to see if it printed any warnings or errors. It should end with "bootstrap complete", if it was successful. If not, please use the "Vagrant-MacOS" forum on Piazza to ask for help. You should see output related to installing/updating Homebrew, VirtualBox, and Vagrant, as well as updating Guest Editions for VirtualBox. Included below is the tail-end of the output from the bootstrap script. As long as you do not have any glaring errors, output similar to what is shown below is fine.
 
-<img src="./media/bootstrap-5.png" alt="bootstrap-5"
+<img src="./media/bootstrap-6.png" alt="bootstrap-5"
 	title="Bootstrap"/>
-	
-<img src="./media/guest-additions.png" alt="guest-additions"
-	title="Guest Additions"/>
