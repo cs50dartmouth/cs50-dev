@@ -1,8 +1,0 @@
-wget
-git
-gcc
-valgrind
-autoconf
-emacs
-libncurses5-dev
-libncursesw5-dev
