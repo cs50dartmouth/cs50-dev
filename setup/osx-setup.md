@@ -39,7 +39,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 7. Open the **Terminal** application. Copy and paste the below command and press *enter* (⏎) to clone the `cs50-dev` repository. You may receive a warning when you try to use git, like the one shown below. Go ahead and click install to install command line developer tools.
 
 ```
-cd && git clone git@github.com:cs50spring2019/cs50-dev.git cs50-dev
+cd && git clone git@github.com:cs50dartmouth/cs50-dev.git cs50-dev
 ```
 
 <img src="./media/git-clone-2.png" alt="git-clone-2"
