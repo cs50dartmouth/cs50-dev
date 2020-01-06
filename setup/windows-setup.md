@@ -84,8 +84,8 @@ You may have to initialize Vagrant before successfully running the previous comm
 ```
 vagrant init
 ```
-<img src="./media/windows-vagrant-init-needed.png">
-<img src="./media/windows-vagrant-init.png">
+<img src="./media/windows-vagrant-init-needed.PNG">
+<img src="./media/windows-vagrant-init.PNG">
 
 It really takes some time. Please be patient. After it's finished, you can use the following command to access the machine and play with it.
 
