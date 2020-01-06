@@ -21,6 +21,7 @@
 <img src="./media/windows-git-9.png">
 
 <img src="./media/windows-git-10.png">
+<img src="./media/windows-git-11.PNG">
 
 
 2. Install Vagrant and VirtualBox. Please go to [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads) and [Vagrant Downloads](https://www.vagrantup.com/downloads.html). Then install them on your PC.
@@ -31,9 +32,9 @@
 
 
 3. Then you can use Windows Command Prompt to use these tools. You can use following commands to check whether they are installed appropriately:
-	
+
 ```
-vargant -v
+vagrant -v
 git --version
 
 ```
@@ -78,6 +79,13 @@ vagrant up
 ```
 
 <img src="./media/windows-vagrant-up.png">
+
+You may have to initialize Vagrant before successfully running the previous command.
+```
+vagrant init
+```
+<img src="./media/windows-vagrant-init-needed.png">
+<img src="./media/windows-vagrant-init.png">
 
 It really takes some time. Please be patient. After it's finished, you can use the following command to access the machine and play with it.
 
