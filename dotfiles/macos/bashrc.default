@@ -1,6 +1,5 @@
 # This file is sourced by .bashrc if the user did not make a custom file.
 # If you want to customize, copy this to .bashrc.default and edit that file instead.
-# This file will be overwritten whenever vagrant is reprovisioned.
 # --------------------------------------------------------------------
 
 # After editing this file, type `source .bash_profile' in any shell

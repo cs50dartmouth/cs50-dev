@@ -2,12 +2,12 @@
 
 ## For git
 
-We recommend doing all your code development in Linux. 
+We recommend doing all your code development in Linux on `plank.thayer.dartmouth.edu` .
 That said, you will keep all your code files in a folder on your Mac.
 It may sometimes be convenient to run git commands from MacOS rather than Linux.
 Those git commands will look in your home directory (aka `~`, aka something like `/Users/yourname`), for configuration files.
 Git should have created `~/.gitconfig` when you set up for the course,
-but you may want to review that file and consider adopting some of the content from the `../virtualbox/gitconfig` file.
+but you may want to review that file and consider adopting some of the content from the `./gitconfig` file.
 
 You'll definitely need one more file: `~/.gitignore_global`.
 To install it, copy it to your home directory -- but add a dot at the beginning of the name:

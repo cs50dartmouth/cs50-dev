@@ -1,10 +1,9 @@
-# WARNING - this file will be overwritten by cs50 if vagrant is reprovisioned.
 
 [core]
 	# pager started by git when needed
 	pager = less -R
 	# editor started by git when needed
-	editor = emacs
+	editor = vi
 	# common gitignore file lives in home dir
 	excludesfile = /Users/yourname/.gitignore_global
 	# proceed with default merge message, rather than asking
