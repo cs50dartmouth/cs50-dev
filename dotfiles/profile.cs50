@@ -1,0 +1,27 @@
+# --------------------------------------------------------------------
+# environment variables recommended for cs50
+
+# Use 'less' as a paginator (e.g., for man pages, git diffs).
+export PAGER="less -R"
+
+# Make less more verbose than usual.
+export LESS='-s -w -M'
+
+# What editor should we use? uncomment the one you prefer
+export EDITOR='/usr/bin/emacs -nw -q'
+# export EDITOR=/usr/bin/vim
+
+# some tools look for this variable to pick an editor
+export VISUAL="$EDITOR"
+
+# --------------------------------------------------------------------
+# resource limits recommended for cs50
+
+# allow core dumps: Thayer granted our request to enable core dumps
+ulimit -c unlimited
+
+# the following can protect against infinite loops with fork(), malloc(), etc.
+ulimit -t 900     # maximum CPU time in seconds
+ulimit -v 100000  # maximum virtual memory in KBytes
+ulimit -u 1000    # maximum number of processes
+

@@ -1,0 +1,76 @@
+#!/bin/bash
+#
+# 'setup' script for CS50 students - the first thing students should
+# run when they join the course.
+#
+# David Kotz 2021
+#
+
+# Get name of directory where this script resides
+MYDIR=$(dirname $(readlink -f ${BASH_SOURCE[0]}))
+
+# Go to our home directory for the rest of this work
+cd
+
+echo """
+Welcome to CS50!
+
+If you are a first-time user of Thayer systems, you need to start by installing
+Thayer's default version of the configuration files used by bash. If you already
+have those files, this script will prompt to overwrite them: you may want to say
+NO, unless you are sure you want to overwrite them.  If you do not already have
+those files, you'll see no output.
+"""
+if /thayerfs/apps/other/copy_skel
+then
+    echo "...all set!"
+else
+    echo "Something failed; exiting..."
+    exit 1
+fi
+
+echo """
+Next, we need to copy in some cs50-specific extensions to those files.
+If you already have these files, you'll be asked whether you want to overwrite.
+"""
+for dot in bashrc profile
+do
+    if cp -i "$MYDIR/$dot.cs50" .$dot.cs50
+    then
+        chmod 600 .$dot.cs50
+        echo "ok .$dot.cs50"
+        # arrange for it to be invoked, if it's not already mentioned
+        grep -q .$dot.cs50 .$dot || echo "source .$dot.cs50" >> .$dot
+    else
+        echo "failed to install $dot.cs50"
+    fi
+done
+
+echo """
+Next, we need to install some additional cs50-recommended files.
+If you already have these files, you'll be asked whether you want to overwrite.
+"""
+for dot in emacs gitconfig vimrc
+do
+    if cp -i "$MYDIR/$dot" .$dot
+    then
+        chmod 600 .$dot
+        echo "ok .$dot"
+    else
+        echo "failed to install .$dot"
+    fi
+done
+
+echo """
+Finished!
+If you're curious how this program works, it's just a bash script!
+You can read it by running this command:
+    less $0
+"""
+
+echo """
+Now, logout (type command 'exit') and log back in.
+The new shell will load your new CS50-specific configuration files.
+"""
+
+exit 0
