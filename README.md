@@ -14,8 +14,7 @@ Specifically, it contains the following files:
 
 ## Preparing your laptop
 
-Install or upgrade the [Dartmouth VPN software](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=13404), if needed.
-You cannot connect to Thayer's Linux servers unless you are connected to Dartmouth's VPN.
+You cannot connect to Thayer's Linux servers unless you are connected to the Dartmouth campus network; if you are off campus, connect your laptop to Dartmouth's [VPN](https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=13404).
 
 ## Preparing for Linux development
 
