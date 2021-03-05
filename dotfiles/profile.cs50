@@ -22,6 +22,6 @@ ulimit -c unlimited
 
 # the following can protect against infinite loops with fork(), malloc(), etc.
 ulimit -t 900     # maximum CPU time in seconds
-ulimit -v 100000  # maximum virtual memory in KBytes
+ulimit -v 1000000 # maximum virtual memory in KBytes
 ulimit -u 1000    # maximum number of processes
 
