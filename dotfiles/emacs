@@ -1,11 +1,6 @@
-; If you prefer something else, create ~/.emacs.custom
-
-; CS50 .emacs customizations
+; CS50 recommended .emacs file
 (global-set-key "\C-xg" 'goto-line)
 (global-set-key "\C-xc" 'compile)
 (setq compile-command "make -k ")
 (setq-default indent-tabs-mode nil)
 
-;; If you want additional or different customizations, create .emacs.custom
-; syntax: (load FILE NOERROR NOMESSAGE NOSUFFIX MUST-SUFFIX)
-(load "~/.emacs.custom" t t nil nil)

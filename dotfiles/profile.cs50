@@ -1,5 +1,7 @@
+# This file includes environment variables required and recommended for CS50.
+# You should 'source' this file from your ~/.bashrc.
+# For more info type `man bash'.
 # --------------------------------------------------------------------
-# environment variables recommended for cs50
 
 # Use 'less' as a paginator (e.g., for man pages, git diffs).
 export PAGER="less -R"
@@ -8,7 +10,7 @@ export PAGER="less -R"
 export LESS='-s -w -M'
 
 # What editor should we use? uncomment the one you prefer
-export EDITOR='/usr/bin/emacs -nw -q'
+# export EDITOR='/usr/bin/emacs -nw -q'
 # export EDITOR=/usr/bin/vim
 
 # some tools look for this variable to pick an editor

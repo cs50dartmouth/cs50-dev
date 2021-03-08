@@ -1,7 +1,7 @@
 # --------------------------------------------------------------------
-# After editing this file, type `source .bashrc.cs50' in any shell
-# which is already open and in which you want the changes to take
-# effect.  For more info type `man bash'.
+# This file includes aliases required and recommended for CS50.
+# You should 'source' this file from your ~/.bashrc.
+# For more info type `man bash'.
 # --------------------------------------------------------------------
 
 # aliases used for cs50 development
