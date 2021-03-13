@@ -26,11 +26,11 @@ In that Terminal window, you will see a prompt, likely ending in `$`.  After tha
 ssh d12345x@plank.thayer.dartmouth.edu
 ```
 
+(The `ssh` command means 'secure shell', which opens a secure connection to server named `plank.thayer.dartmouth.edu` and launches the `bash` shell program under user id `d12345x`.)
+
 > If pauses a long time, then reports that the "connection timed out", double-check that you are connected to Dartmouth's VPN.
 
 It will ask for your password; use your NetID password.
-(The `ssh` command means 'secure shell', which opens a secure connection to server named `plank.thayer.dartmouth.edu` and launches the `bash` shell program under user id `d12345x`.)
-
 It will pause briefly, warn you about your usage of disk space on the Thayer File System (ThayerFS), and then give you a command prompt for the `bash` shell on `plank`
 
 ```bash
@@ -40,7 +40,9 @@ d12345x@plank.thayer.dartmouth.edu's password:
 d12345x@plank:~$
 ```
 
+You are now at *the command line*: the computer prints a prompt and waits for you to type a command.
 The prompt indicates you are user `d12345x`, logged into server named `plank`, and your *current working directory* is `~`, which is shorthand for your *home directory*.
+All of your files will live in your home directory (like a folder) or in subdirectories (like subfolders).
 
 Type the command `copy_skel` to install the standard Thayer-issue `bash` configuration files:
 
@@ -83,7 +85,7 @@ You may want to compare our files to yours, and edit in our suggestions as you s
 
 > To pick a preferred editor, edit profile.cs50 to uncomment the line defining `EDITOR`.
 
-Finally, log out of plank (use the `exit` command to exit bash), and log back in.
+Finally, log out of plank (use the `exit` command to exit bash), and log back in using the `ssh` command from above.
 
 ```bash
 d12345x@plank:~$ exit
