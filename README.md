@@ -91,7 +91,7 @@ Finally, log out of plank (use the `exit` command to exit bash), and log back in
 d12345x@plank:~$ exit
 ```
 
-## Developing on your laptop
+## Developing your code
 
 Do all your work in the `c50-dev` folder.
 Thus, after login, change your *current directory* (aka *working directory*) to the `cs50-dev` subdirectory:
@@ -104,12 +104,26 @@ d12345x@plank:cs50-dev$
 From there, create or clone new git repositories for your coursework.
 
 **In CS50 we support development only on Thayer's Linux systems.**
+Not MacOS, not Windows, not even other Linux systems.
 Linux systems differ in subtle ways; MacOS is a form of Unix different from Linux, and Windows is even more different.
 
 Even so, some students may find it convenient to develop code on their own laptop, and later test it on `plank`.
-If you wish to configure your Mac or Windows laptop for development, download the `dotfiles` directory from this repository and integrate their contents into the corresponding configuration files within the Unix environment on your laptop.
-For example, on your laptop, edit the default `.bashrc` file to include the contents of `dotfiles/bashrc.cs50` from this repository.
-
 **Remember**: You need to make sure that your code compiles and runs correctly on the `plank` system.
 You can edit your files locally on your own system, but your compiling and testing should always be on `plank`.
 Our graders will use `plank` for all testing; it doesn't matter whether your programs compiled or ran on your laptop.
+
+## Tips for speedier login
+
+Every time you login, it reminds you about whether you are getting close to consuming all your disk-space quota:
+
+```
+<< You are currently using 47.39M of your 5.00G home directory quota. >>
+```
+
+That's nice, but it is slow.
+You can turn off this message by creating a file in your home directory.
+Although the mere presence of this file is sufficient, I recommend putting some text in the file so you can remember why it is there:
+
+```bash
+d12345x@plank:~$ echo The presence of this file disables login notification of your disk-quota usage. >  ~/.notfsquota
+```
