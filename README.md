@@ -127,3 +127,11 @@ Although the mere presence of this file is sufficient, I recommend putting some 
 ```bash
 d12345x@plank:~$ echo The presence of this file disables login notification of your disk-quota usage. >  ~/.notfsquota
 ```
+
+If you later wish to check your disk usage, you can remove this file (then logout and login), or simply run
+
+```
+$ tfsquota
+```
+
+There is also a simple [web portal](https://quota-lookup.thayer.dartmouth.edu/) to check your quotas.
