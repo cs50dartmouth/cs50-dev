@@ -3,11 +3,14 @@
 CS50 configuration files for Linux.
 
 This repository contains files for configuring your CS50 development environment on the Thayer Computing systems.
-Specifically, it contains the following files:
+Specifically, it contains the following:
 
-* `dotfiles` - the 'dot' files for your home directory; see the README file there.
-* `.gitignore` - a template for the `.gitignore` file to be used when you create a new, empty git repository.
-(In CS50, most of the time you will begin work with a clone of a 'starter kit' repository we prepare, which will already include a `.gitignore` file.)
+* file `README.md` - these instructions, in 'Markdown' format.
+* directory `dotfiles` - the 'dot' files for your home directory; see [dotfiles/README.md](dotfiles/README.md).
+* symbolic link `shared` to a shared directory of CS50 content provided by the instructor.
+* file `.gitignore` - a template for the `.gitignore` file to be used when you create a new, empty git repository.
+
+You won't see `.gitignore` unless you `ls -a`.
 
 ## Preparing your laptop
 
@@ -28,10 +31,10 @@ ssh d12345x@plank.thayer.dartmouth.edu
 
 (The `ssh` command means 'secure shell', which opens a secure connection to server named `plank.thayer.dartmouth.edu` and launches the `bash` shell program under user id `d12345x`.)
 
-> If pauses a long time, then reports that the "connection timed out", double-check that you are connected to Dartmouth's VPN.
+> If it reports "connection refused" or (after a long wait) "connection timed out", double-check that you are connected to Dartmouth's network or VPN.
 
 It will ask for your password; use your NetID password.
-It will pause briefly, warn you about your usage of disk space on the Thayer File System (ThayerFS), and then give you a command prompt for the `bash` shell on `plank`
+It will pause briefly, warn you about your usage of disk space on the Thayer File System (ThayerFS), and then give you a command prompt:
 
 ```bash
 $ ssh d12345x@plank.thayer.dartmouth.edu
@@ -53,6 +56,7 @@ d12345x@plank:~$ copy_skel
 This program installs (or overwrites) the files  `.bashrc` and `.profile` in your home directory.
 **Important:** if you have used Thayer's Linux systems before, and have customized your copy of these configuration files, type `n` when the script asks to overwrite them; if you type `y` you will lose your customizations and begin with fresh Thayer-supplied default configuration.
 
+<!-- @CHANGEME - insert term-specific repo link -->
 Next, clone this repository into your home directory:
 
 ```bash
@@ -65,8 +69,8 @@ The result is a subdirectory named `cs50-dev` in which you should do all your de
 It contains some necessary extensions to the bash configuration files; update your bash configuration to invoke them when you next log in:
 
 ```bash
-d12345x@plank:~$ echo source cs50-dev/dotfiles/bashrc.cs50 >> .bashrc
-d12345x@plank:~$ echo source cs50-dev/dotfiles/profile.cs50 >> .profile
+d12345x@plank:~$ echo source cs50-dev/dotfiles/bashrc.cs50 >> ~/.bashrc
+d12345x@plank:~$ echo source cs50-dev/dotfiles/profile.cs50 >> ~/.profile
 ```
 
 These `echo` commands append a line to the bottom of each file.
@@ -83,7 +87,9 @@ d12345x@plank:~$ cp -i cs50-dev/dotfiles/gitconfig .gitconfig
 **Important:** if you already had a Linux account on Thayer systems, and already had one or more of those dot files, `cp` will ask if you want to overwrite them; type `y` if you want to use our recommended file, and type `n` otherwise.
 You may want to compare our files to yours, and edit in our suggestions as you see fit.
 
-> To pick a preferred editor, edit profile.cs50 to uncomment the line defining `EDITOR`.
+To pick a preferred editor, edit profile.cs50 to uncomment the line defining `EDITOR`.
+
+> Read [about editors](https://www.cs.dartmouth.edu/~kotz/cs50/Logistics/systems.html#editors).
 
 Finally, log out of plank (use the `exit` command to exit bash), and log back in using the `ssh` command from above.
 
@@ -103,35 +109,7 @@ d12345x@plank:cs50-dev$
 
 From there, create or clone new git repositories for your coursework.
 
-**In CS50 we support development only on Thayer's Linux systems.**
-Not MacOS, not Windows, not even other Linux systems.
-Linux systems differ in subtle ways; MacOS is a form of Unix different from Linux, and Windows is even more different.
 
-Even so, some students may find it convenient to develop code on their own laptop, and later test it on `plank`.
-**Remember**: You need to make sure that your code compiles and runs correctly on the `plank` system.
-You can edit your files locally on your own system, but your compiling and testing should always be on `plank`.
-Our graders will use `plank` for all testing; it doesn't matter whether your programs compiled or ran on your laptop.
+## More information
 
-## Tips for speedier login
-
-Every time you login, it reminds you about whether you are getting close to consuming all your disk-space quota:
-
-```
-<< You are currently using 47.39M of your 5.00G home directory quota. >>
-```
-
-That's nice, but it is slow.
-You can turn off this message by creating a file in your home directory.
-Although the mere presence of this file is sufficient, I recommend putting some text in the file so you can remember why it is there:
-
-```bash
-d12345x@plank:~$ echo The presence of this file disables login notification of your disk-quota usage. >  ~/.notfsquota
-```
-
-If you later wish to check your disk usage, you can remove this file (then logout and login), or simply run
-
-```
-$ tfsquota
-```
-
-There is also a simple [web portal](https://quota-lookup.thayer.dartmouth.edu/) to check your quotas.
+Much more information about the systems we use in CS50, including links to many other resources, can be found on the [systems page](https://www.cs.dartmouth.edu/~kotz/cs50/Logistics/systems.html) of the course website.
