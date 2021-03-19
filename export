@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# export - copy the files needed to the student's repo
+#
+# usage: export <target>
+#  where target is the pathname of the directory containing an
+#  empty clone of the student's repo.
+#
+# David Kotz 2021
+
+target="$1"
+
+if [ ! -d "$target" ]; then
+   echo "missing or invalid target directory $target"
+   exit 1
+fi
+   
+rsync -ac _README.md "$target/README.md"        || exit 2
+rsync -ac shared "$target/"                     || exit 3
+rsync -ac --delete dotfiles/ "$target/dotfiles" || exit 4
+
+cd "$target"                                          || exit 7
+git add shared dotfiles/*                             || exit 6
+git commit -m "exported from long-term cs50-dev repo" || exit 8
+
+echo success
+exit 0
+
