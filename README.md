@@ -86,7 +86,7 @@ You cannot connect to Thayer's Linux servers unless you are connected to the Dar
 	**Important:** if you already had a Linux account on Thayer systems, and already had one or more of those dot files, `cp` will ask if you want to overwrite them; type `y` if you want to use our recommended file, and type `n` otherwise.
 	You may want to compare our files to yours, and edit in our suggestions as you see fit.
 
-9. To pick a preferred editor, edit profile.cs50 to uncomment one line defining `EDITOR`.
+9. To pick a preferred editor, edit `~/cs50-dev/dotfiles/profile.cs50` to uncomment one line defining `EDITOR`.
 
 	> Read [about editors](https://www.cs.dartmouth.edu/~kotz/cs50/Logistics/systems.html#editors).
 
