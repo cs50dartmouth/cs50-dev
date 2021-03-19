@@ -20,7 +20,7 @@ rsync -ac shared "$target/"                     || exit 3
 rsync -ac --delete dotfiles/ "$target/dotfiles" || exit 4
 
 cd "$target"                                          || exit 7
-git add shared dotfiles/*                             || exit 6
+git add README.md shared dotfiles/*                   || exit 6
 git commit -m "exported from long-term cs50-dev repo" || exit 8
 
 echo success
