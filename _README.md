@@ -38,14 +38,15 @@ You cannot connect to Thayer's Linux servers unless you are connected to the Dar
 	d12345x@plank:~$
 	```
 	
-3. You are now at *the command line*: the computer prints a prompt and waits for you to type a command.
+3. You are now at *the command line*: the computer prints a prompt (`d12345x@plank:~$`) and waits for you to type a command.
 	The prompt indicates you are user `d12345x`, logged into server named `plank`, and your *current working directory* is `~`, which is shorthand for your *home directory*.
 	All of your files will live in your home directory (like a folder) or in subdirectories (like subfolders).
+	Below, we do not show the prompt, just the commands you should type.
 
-4. Type the command `copy_skel` to install the standard Thayer-issue `bash` configuration files:
+4. At the prompt, type the command `copy_skel` to install the standard Thayer-issue `bash` configuration files:
 
 	```bash
-	d12345x@plank:~$ copy_skel
+	copy_skel
 	```
 	
 	This program installs (or overwrites) the files  `.bashrc` and `.profile` in your home directory.
@@ -57,18 +58,16 @@ You cannot connect to Thayer's Linux servers unless you are connected to the Dar
 	<!-- @CHANGEME - insert term-specific repo link -->
 	
 	```bash
-	d12345x@plank:~$ git clone git@github.com:cs50dartmouth/cs50-dev.git 
+	git clone git@github.com:cs50spring2021/cs50-dev.git
 	```
 	
-	>@update the above link, using the term-specific https url
-
 	The result is a subdirectory named `cs50-dev` in which you should do all your development for this course.
 
 7. The repository contains some necessary extensions to the bash configuration files; update your bash configuration to invoke them when you next log in:
 
 	```bash
-	d12345x@plank:~$ echo source cs50-dev/dotfiles/bashrc.cs50 >> ~/.bashrc
-	d12345x@plank:~$ echo source cs50-dev/dotfiles/profile.cs50 >> ~/.profile
+	echo source cs50-dev/dotfiles/bashrc.cs50 >> ~/.bashrc
+	echo source cs50-dev/dotfiles/profile.cs50 >> ~/.profile
 	```
 	
 	These `echo` commands append a line to the bottom of each file.
@@ -77,9 +76,9 @@ You cannot connect to Thayer's Linux servers unless you are connected to the Dar
 8. Copy our recommended files into your home directory:
 	
 	```bash
-	d12345x@plank:~$ cp -i cs50-dev/dotfiles/emacs .emacs
-	d12345x@plank:~$ cp -i cs50-dev/dotfiles/vimrc .vimrc
-	d12345x@plank:~$ cp -i cs50-dev/dotfiles/gitconfig .gitconfig
+	cp -i cs50-dev/dotfiles/emacs .emacs
+	cp -i cs50-dev/dotfiles/vimrc .vimrc
+	cp -i cs50-dev/dotfiles/gitconfig .gitconfig
 	```
 	
 	**Important:** if you already had a Linux account on Thayer systems, and already had one or more of those dot files, `cp` will ask if you want to overwrite them; type `y` if you want to use our recommended file, and type `n` otherwise.
@@ -87,12 +86,12 @@ You cannot connect to Thayer's Linux servers unless you are connected to the Dar
 
 9. To pick a preferred editor, edit `~/cs50-dev/dotfiles/profile.cs50` to uncomment one line defining `EDITOR`.
 
-	> Read [about editors](https://www.cs.dartmouth.edu/~kotz/cs50/Logistics/systems.html#editors).
+	> Read [about editors](https://www.cs.dartmouth.edu/~cs50/Logistics/systems.html#editors).
 
 10. Finally, log out of plank (use the `exit` command to exit bash), and log back in using the `ssh` command from above.
 
 	```bash
-	d12345x@plank:~$ exit
+	exit
 	```
 
 ## Developing your code
@@ -105,9 +104,10 @@ d12345x@plank:~$ cd cs50-dev
 d12345x@plank:cs50-dev$ 
 ```
 
+Note how the prompt changed to reflect the new directory.
 From there, create or clone new git repositories for your coursework.
 
 
 ## More information
 
-Much more information about the systems we use in CS50, including links to many other resources, can be found on the [systems page](https://www.cs.dartmouth.edu/~kotz/cs50/Logistics/systems.html) of the course website.
+Much more information about the systems we use in CS50, including links to many other resources, can be found on the [systems page](https://www.cs.dartmouth.edu/~cs50/Logistics/systems.html) of the course website.
