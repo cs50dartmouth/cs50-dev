@@ -1,5 +1,11 @@
 # CS50 development environment
 
+## THIS REPO IS DEPRECATED.
+
+After constructing this branch, I decided to move this content into the [instructor repo](https://github.com/cs50dartmouth/instructor/tree/spring21) instead.
+**Do not use this repo.**
+
+## Old instructions
 This repo and this README is **for instructors**.
 
 This repo is a long-lived repository of the development environment prepared for CS50 students.
